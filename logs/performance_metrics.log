@@ -1,0 +1,815 @@
+2025-11-13 14:00:40,673 - Knowledge - INFO - Created shared MongoDB connection pool
+2025-11-13 14:00:41,007 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2025-11-13 14:00:41,177 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2025-11-13 14:00:41,381 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=25, max_concurrent_llm_calls=50
+2025-11-13 14:00:42,964 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-11-13 14:00:43,155 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2025-11-13 14:00:43,317 - Knowledge - INFO - load persisted knowledge: begin
+2025-11-13 14:00:43,469 - Knowledge - INFO - Loaded 0 files from persisted knowledge
+2025-11-13 14:00:43,640 - Knowledge - INFO - load persisted knowledge: end
+2025-11-13 14:00:43,812 - Knowledge - WARNING - No persisted knowledge found. Files will be queued during start()
+2025-11-13 14:00:43,992 - Knowledge - INFO - Redis support added with prefix knowledge:b0194o2:
+2025-11-13 14:00:44,452 - Knowledge - INFO - Starting knowledge initialization for ID: 075ikZ-b0194o2
+2025-11-13 14:00:44,638 - Knowledge - INFO - 🔍 Checking Redis for build_id: b0194o2
+2025-11-13 14:00:44,814 - Knowledge - INFO - 🔍 Full session ID: 075ikZ-b0194o2
+2025-11-13 14:00:44,978 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b0194o2:
+2025-11-13 14:00:45,128 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2025-11-13 14:00:45,343 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-11-13 14:00:45,526 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b0194o2
+2025-11-13 14:00:47,566 - Knowledge - WARNING - ❌ No Redis cache found
+2025-11-13 14:00:49,582 - Knowledge - INFO - 📁 Loading knowledge from disk...
+2025-11-13 14:00:49,855 - Knowledge - INFO - load persisted docinfo: begin
+2025-11-13 14:00:50,047 - Knowledge - INFO - load persisted docinfo: end
+2025-11-13 14:00:50,226 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-11-13 14:00:50,403 - Knowledge - INFO - ✅ load_from_redis method found - attempting Redis load
+2025-11-13 14:00:50,585 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-11-13 14:00:50,821 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b0194o2
+2025-11-13 14:00:53,371 - Knowledge - WARNING - ❌ No Redis cache found
+2025-11-13 14:00:53,545 - Knowledge - INFO - ❌ Redis load returned False - falling back to file loading
+2025-11-13 14:00:53,736 - Knowledge - INFO - load persisted knowledge: begin
+2025-11-13 14:00:53,945 - Knowledge - INFO - Loaded 0 files from persisted knowledge
+2025-11-13 14:00:54,130 - Knowledge - INFO - load persisted knowledge: end
+2025-11-13 14:00:54,289 - Knowledge - INFO - 📁 Disk load complete in 4.47s
+2025-11-13 14:00:54,509 - Knowledge - INFO - Populating ingest queue with source files...
+2025-11-13 14:00:55,059 - Knowledge - INFO - Added 206 files from /app/data/T0015/224199/b0194o2/jira-clone-angular to ingest queue
+2025-11-13 14:00:55,259 - Knowledge - INFO - Worker kw1 created using shared MongoDB connection pool
+2025-11-13 14:00:55,451 - Knowledge - INFO - knowledge worker kw1 start
+2025-11-13 14:00:55,451 - Knowledge - INFO - Worker kw2 created using shared MongoDB connection pool
+2025-11-13 14:00:55,667 - Knowledge - INFO - [kw1] Queue=206, InProgress=0, PendingWorkers=0/1, Completed=0/206 (0.0%)
+2025-11-13 14:00:55,762 - Knowledge - INFO - knowledge worker kw2 start
+2025-11-13 14:00:55,763 - Knowledge - INFO - Worker kw3 created using shared MongoDB connection pool
+2025-11-13 14:00:55,850 - Knowledge - INFO - Batch sizing: calculated=15, max_allowed=25, queue=206, active_workers=0/2
+2025-11-13 14:00:55,937 - Knowledge - INFO - [kw2] Queue=206, InProgress=0, PendingWorkers=0/2, Completed=0/206 (0.0%)
+2025-11-13 14:00:56,011 - Knowledge - INFO - knowledge worker kw3 start
+2025-11-13 14:00:56,011 - Knowledge - INFO - Worker kw4 created using shared MongoDB connection pool
+2025-11-13 14:00:56,094 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/environments/environment-model.ts
+2025-11-13 14:00:56,165 - Knowledge - INFO - Batch sizing: calculated=15, max_allowed=25, queue=206, active_workers=1/3
+2025-11-13 14:00:56,284 - Knowledge - INFO - [kw3] Queue=191, InProgress=0, PendingWorkers=1/3, Completed=0/206 (0.0%)
+2025-11-13 14:00:56,375 - Knowledge - INFO - knowledge worker kw4 start
+2025-11-13 14:00:56,375 - Knowledge - INFO - Worker kw5 created using shared MongoDB connection pool
+2025-11-13 14:00:56,472 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/environments/environment-model.ts (ext=.ts, size=79)
+2025-11-13 14:00:56,587 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.spec.ts
+2025-11-13 14:00:56,669 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=191, active_workers=2/4
+2025-11-13 14:00:56,749 - Knowledge - INFO - [kw4] Queue=176, InProgress=0, PendingWorkers=2/4, Completed=0/206 (0.0%)
+2025-11-13 14:00:56,812 - Knowledge - INFO - knowledge worker kw5 start
+2025-11-13 14:00:56,813 - Knowledge - INFO - Worker kw6 created using shared MongoDB connection pool
+2025-11-13 14:00:56,900 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/environments/environment.ts
+2025-11-13 14:00:56,978 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.spec.ts (ext=.ts, size=308)
+2025-11-13 14:00:57,066 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.html
+2025-11-13 14:00:57,163 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=176, active_workers=3/5
+2025-11-13 14:00:57,250 - Knowledge - INFO - [kw5] Queue=164, InProgress=0, PendingWorkers=3/5, Completed=0/206 (0.0%)
+2025-11-13 14:00:57,371 - Knowledge - INFO - knowledge worker kw6 start
+2025-11-13 14:00:57,372 - Knowledge - INFO - Worker kw7 created using shared MongoDB connection pool
+2025-11-13 14:00:57,452 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/environments/environment.ts (ext=.ts, size=793)
+2025-11-13 14:00:57,522 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.scss
+2025-11-13 14:00:57,631 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.html (ext=.html, size=102)
+2025-11-13 14:00:57,707 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/issue-type-icon.ts
+2025-11-13 14:00:57,781 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=164, active_workers=4/6
+2025-11-13 14:00:57,889 - Knowledge - INFO - [kw6] Queue=152, InProgress=0, PendingWorkers=4/6, Completed=0/206 (0.0%)
+2025-11-13 14:00:57,948 - Knowledge - INFO - knowledge worker kw7 start
+2025-11-13 14:00:57,948 - Knowledge - INFO - Worker kw8 created using shared MongoDB connection pool
+2025-11-13 14:00:58,035 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/environments/environment.prod.ts
+2025-11-13 14:00:58,123 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.scss (ext=.scss, size=2055)
+2025-11-13 14:00:58,210 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.stories.ts
+2025-11-13 14:00:58,294 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/issue-type-icon.ts (ext=.ts, size=291)
+2025-11-13 14:00:58,405 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/directives/autofocus.directive.spec.ts
+2025-11-13 14:00:58,493 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=152, active_workers=5/7
+2025-11-13 14:00:58,589 - Knowledge - INFO - [kw7] Queue=140, InProgress=0, PendingWorkers=5/7, Completed=0/206 (0.0%)
+2025-11-13 14:00:58,718 - Knowledge - INFO - knowledge worker kw8 start
+2025-11-13 14:00:58,718 - Knowledge - INFO - Worker kw9 created using shared MongoDB connection pool
+2025-11-13 14:00:58,802 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/environments/environment.prod.ts (ext=.ts, size=202)
+2025-11-13 14:00:58,880 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/breadcrumbs/breadcrumbs.component.ts
+2025-11-13 14:00:58,973 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.stories.ts (ext=.ts, size=670)
+2025-11-13 14:00:59,092 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress-routing.module.spec.ts
+2025-11-13 14:00:59,188 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/directives/autofocus.directive.spec.ts (ext=.ts, size=852)
+2025-11-13 14:00:59,264 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/board/board.component.ts
+2025-11-13 14:00:59,339 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=140, active_workers=6/8
+2025-11-13 14:00:59,419 - Knowledge - INFO - [kw8] Queue=128, InProgress=0, PendingWorkers=6/8, Completed=0/206 (0.0%)
+2025-11-13 14:00:59,536 - Knowledge - INFO - knowledge worker kw9 start
+2025-11-13 14:00:59,536 - Knowledge - INFO - Worker kw10 created using shared MongoDB connection pool
+2025-11-13 14:00:59,670 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/main.ts
+2025-11-13 14:00:59,755 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/breadcrumbs/breadcrumbs.component.ts (ext=.ts, size=278)
+2025-11-13 14:00:59,831 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.scss
+2025-11-13 14:00:59,967 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress-routing.module.spec.ts (ext=.ts, size=524)
+2025-11-13 14:01:00,073 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/directives/autofocus.directive.ts
+2025-11-13 14:01:00,156 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/board/board.component.ts (ext=.ts, size=529)
+2025-11-13 14:01:00,248 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.html
+2025-11-13 14:01:00,328 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=128, active_workers=7/9
+2025-11-13 14:01:00,456 - Knowledge - INFO - [kw9] Queue=116, InProgress=0, PendingWorkers=7/9, Completed=0/206 (0.0%)
+2025-11-13 14:01:00,540 - Knowledge - INFO - knowledge worker kw10 start
+2025-11-13 14:01:00,540 - Knowledge - INFO - Worker kw11 created using shared MongoDB connection pool
+2025-11-13 14:01:00,622 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/main.ts (ext=.ts, size=744)
+2025-11-13 14:01:00,705 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/breadcrumbs/breadcrumbs.stories.ts
+2025-11-13 14:01:00,774 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.scss (ext=.scss, size=683)
+2025-11-13 14:01:00,883 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.module.ts
+2025-11-13 14:01:00,968 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/directives/autofocus.directive.ts (ext=.ts, size=1129)
+2025-11-13 14:01:01,102 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/settings/settings.component.scss
+2025-11-13 14:01:01,189 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.html (ext=.html, size=272)
+2025-11-13 14:01:01,311 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/sidebar/sidebar.component.scss
+2025-11-13 14:01:01,383 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=116, active_workers=8/10
+2025-11-13 14:01:01,494 - Knowledge - INFO - [kw10] Queue=104, InProgress=0, PendingWorkers=8/10, Completed=0/206 (0.0%)
+2025-11-13 14:01:01,584 - Knowledge - INFO - knowledge worker kw11 start
+2025-11-13 14:01:01,584 - Knowledge - INFO - Worker kw12 created using shared MongoDB connection pool
+2025-11-13 14:01:01,660 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/styles.scss
+2025-11-13 14:01:01,769 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/breadcrumbs/breadcrumbs.stories.ts (ext=.ts, size=499)
+2025-11-13 14:01:01,850 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.module.ts
+2025-11-13 14:01:01,945 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.module.ts (ext=.ts, size=409)
+2025-11-13 14:01:02,037 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/validators/no-whitespace.validator.ts
+2025-11-13 14:01:02,122 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/settings/settings.component.scss (ext=.scss, size=38)
+2025-11-13 14:01:02,214 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.ts
+2025-11-13 14:01:02,305 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/sidebar/sidebar.component.scss (ext=.scss, size=856)
+2025-11-13 14:01:02,387 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-card/issue-card.component.html
+2025-11-13 14:01:02,479 - Knowledge - INFO - Batch sizing: calculated=12, max_allowed=25, queue=104, active_workers=9/11
+2025-11-13 14:01:02,586 - Knowledge - INFO - [kw11] Queue=92, InProgress=0, PendingWorkers=9/11, Completed=0/206 (0.0%)
+2025-11-13 14:01:02,663 - Knowledge - INFO - knowledge worker kw12 start
+2025-11-13 14:01:02,663 - Knowledge - INFO - Worker kw13 created using shared MongoDB connection pool
+2025-11-13 14:01:02,752 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/styles.scss (ext=.scss, size=757)
+2025-11-13 14:01:02,843 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/breadcrumbs/breadcrumbs.component.html
+2025-11-13 14:01:02,970 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.module.ts (ext=.ts, size=1825)
+2025-11-13 14:01:03,059 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.component.html
+2025-11-13 14:01:03,143 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/validators/no-whitespace.validator.ts (ext=.ts, size=548)
+2025-11-13 14:01:03,228 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/settings/settings.component.html
+2025-11-13 14:01:03,330 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.ts (ext=.ts, size=391)
+2025-11-13 14:01:03,420 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/index.ts
+2025-11-13 14:01:03,565 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-card/issue-card.component.html (ext=.html, size=1831)
+2025-11-13 14:01:03,650 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.spec.ts
+2025-11-13 14:01:03,720 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=92, active_workers=10/12
+2025-11-13 14:01:03,866 - Knowledge - INFO - [kw12] Queue=80, InProgress=0, PendingWorkers=10/12, Completed=0/206 (0.0%)
+2025-11-13 14:01:03,949 - Knowledge - INFO - knowledge worker kw13 start
+2025-11-13 14:01:03,951 - Knowledge - INFO - Worker kw14 created using shared MongoDB connection pool
+2025-11-13 14:01:04,032 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/index.prod.html
+2025-11-13 14:01:04,130 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/breadcrumbs/breadcrumbs.component.html (ext=.html, size=215)
+2025-11-13 14:01:04,213 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/comment.ts
+2025-11-13 14:01:04,291 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.module.spec.ts
+2025-11-13 14:01:04,374 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/validators/no-whitespace.validator.spec.ts
+2025-11-13 14:01:04,460 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/settings/settings.component.html (ext=.html, size=1890)
+2025-11-13 14:01:04,537 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.scss
+2025-11-13 14:01:04,663 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/index.ts (ext=.ts, size=311)
+2025-11-13 14:01:04,762 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-card/issue-card.component.ts
+2025-11-13 14:01:04,856 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.spec.ts (ext=.ts, size=2057)
+2025-11-13 14:01:04,924 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-detail/issue-detail.component.html
+2025-11-13 14:01:04,997 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=80, active_workers=11/13
+2025-11-13 14:01:05,076 - Knowledge - INFO - [kw13] Queue=70, InProgress=0, PendingWorkers=11/13, Completed=0/206 (0.0%)
+2025-11-13 14:01:05,195 - Knowledge - INFO - knowledge worker kw14 start
+2025-11-13 14:01:05,196 - Knowledge - INFO - Worker kw15 created using shared MongoDB connection pool
+2025-11-13 14:01:05,265 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.spec.ts
+2025-11-13 14:01:05,348 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/jira-control.module.spec.ts
+2025-11-13 14:01:05,435 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/comment.ts (ext=.ts, size=459)
+2025-11-13 14:01:05,524 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.module.spec.ts (ext=.ts, size=472)
+2025-11-13 14:01:05,596 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/validators/no-whitespace.validator.spec.ts (ext=.ts, size=904)
+2025-11-13 14:01:05,671 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/settings/settings.component.ts
+2025-11-13 14:01:05,768 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.scss (ext=.scss, size=33)
+2025-11-13 14:01:05,936 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd-list/board-dnd-list.component.html
+2025-11-13 14:01:06,010 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-card/issue-card.component.ts (ext=.ts, size=1815)
+2025-11-13 14:01:07,392 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd-list/board-dnd-list.component.html (ext=.html, size=569)
+2025-11-13 14:01:06,234 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-detail/issue-detail.component.ts
+2025-11-13 14:01:06,319 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/index.ts
+2025-11-13 14:01:06,401 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=70, active_workers=12/14
+2025-11-13 14:01:06,492 - Knowledge - INFO - [kw14] Queue=60, InProgress=0, PendingWorkers=12/14, Completed=0/206 (0.0%)
+2025-11-13 14:01:06,585 - Knowledge - INFO - knowledge worker kw15 start
+2025-11-13 14:01:06,585 - Knowledge - INFO - Worker kw16 created using shared MongoDB connection pool
+2025-11-13 14:01:06,672 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.spec.ts (ext=.ts, size=1666)
+2025-11-13 14:01:06,753 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/jira-control.module.spec.ts (ext=.ts, size=618)
+2025-11-13 14:01:06,855 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/user.ts
+2025-11-13 14:01:07,019 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress-routing.module.ts
+2025-11-13 14:01:07,094 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.module.ts
+2025-11-13 14:01:07,227 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/full-issue-detail/full-issue-detail.component.html
+2025-11-13 14:01:07,309 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.spec.ts
+2025-11-13 14:01:06,164 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-priority/issue-priority.component.html
+2025-11-13 14:01:07,490 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-card/issue-card.component.scss
+2025-11-13 14:01:07,570 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts
+2025-11-13 14:01:07,640 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-detail/issue-detail.component.ts (ext=.ts, size=1396)
+2025-11-13 14:01:07,726 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/index.ts (ext=.ts, size=1526)
+2025-11-13 14:01:07,841 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/issue-result/issue-result.component.html
+2025-11-13 14:01:07,960 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=60, active_workers=13/15
+2025-11-13 14:01:08,049 - Knowledge - INFO - [kw15] Queue=50, InProgress=0, PendingWorkers=13/15, Completed=0/206 (0.0%)
+2025-11-13 14:01:08,168 - Knowledge - INFO - knowledge worker kw16 start
+2025-11-13 14:01:08,168 - Knowledge - INFO - Worker kw17 created using shared MongoDB connection pool
+2025-11-13 14:01:08,251 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.html
+2025-11-13 14:01:08,381 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-icon/svg-icon.component.ts
+2025-11-13 14:01:08,480 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/user.ts (ext=.ts, size=159)
+2025-11-13 14:01:08,558 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress-routing.module.ts (ext=.ts, size=378)
+2025-11-13 14:01:08,632 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.module.ts (ext=.ts, size=270)
+2025-11-13 14:01:08,711 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/full-issue-detail/full-issue-detail.component.html (ext=.html, size=367)
+2025-11-13 14:01:08,820 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.spec.ts (ext=.ts, size=391)
+2025-11-13 14:01:08,899 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-priority/issue-priority.component.html (ext=.html, size=1270)
+2025-11-13 14:01:09,022 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-card/issue-card.component.scss (ext=.scss, size=386)
+2025-11-13 14:01:09,108 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd-list/board-dnd-list.component.scss
+2025-11-13 14:01:09,179 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-reporter/issue-reporter.component.scss
+2025-11-13 14:01:09,266 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-delete-modal/issue-delete-modal.component.spec.ts
+2025-11-13 14:01:09,382 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/issue-result/issue-result.component.html (ext=.html, size=446)
+2025-11-13 14:01:09,466 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.spec.ts
+2025-11-13 14:01:09,546 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=50, active_workers=14/16
+2025-11-13 14:01:09,632 - Knowledge - INFO - [kw16] Queue=40, InProgress=0, PendingWorkers=14/16, Completed=0/206 (0.0%)
+2025-11-13 14:01:09,720 - Knowledge - INFO - knowledge worker kw17 start
+2025-11-13 14:01:09,720 - Knowledge - INFO - Worker kw18 created using shared MongoDB connection pool
+2025-11-13 14:01:09,838 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.html (ext=.html, size=792)
+2025-11-13 14:01:09,915 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-icon/svg-icon.component.ts (ext=.ts, size=372)
+2025-11-13 14:01:09,987 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/project.ts
+2025-11-13 14:01:10,085 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.component.ts
+2025-11-13 14:01:10,204 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.component.scss
+2025-11-13 14:01:10,288 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/full-issue-detail/full-issue-detail.component.ts
+2025-11-13 14:01:10,369 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/resizer/resizer.component.html
+2025-11-13 14:01:10,460 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-priority/issue-priority.component.ts
+2025-11-13 14:01:10,570 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-type/issue-type.component.html
+2025-11-13 14:01:10,658 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd-list/board-dnd-list.component.scss (ext=.scss, size=787)
+2025-11-13 14:01:10,733 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-reporter/issue-reporter.component.scss (ext=.scss, size=54)
+2025-11-13 14:01:10,814 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-delete-modal/issue-delete-modal.component.spec.ts (ext=.ts, size=712)
+2025-11-13 14:01:10,893 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/issue-result/issue-result.component.ts
+2025-11-13 14:01:10,992 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.spec.ts (ext=.ts, size=640)
+2025-11-13 14:01:11,075 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/const.ts
+2025-11-13 14:01:11,163 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=40, active_workers=15/17
+2025-11-13 14:01:11,247 - Knowledge - INFO - [kw17] Queue=30, InProgress=0, PendingWorkers=15/17, Completed=0/206 (0.0%)
+2025-11-13 14:01:11,329 - Knowledge - INFO - knowledge worker kw18 start
+2025-11-13 14:01:11,329 - Knowledge - INFO - Worker kw19 created using shared MongoDB connection pool
+2025-11-13 14:01:11,443 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.stories.ts
+2025-11-13 14:01:11,521 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-icon/svg-icon.component.html
+2025-11-13 14:01:11,609 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/project.ts (ext=.ts, size=420)
+2025-11-13 14:01:11,690 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.component.ts (ext=.ts, size=258)
+2025-11-13 14:01:11,765 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.component.scss (ext=.scss, size=1311)
+2025-11-13 14:01:11,848 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/full-issue-detail/full-issue-detail.component.ts (ext=.ts, size=1851)
+2025-11-13 14:01:11,932 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/resizer/resizer.component.html (ext=.html, size=465)
+2025-11-13 14:01:12,007 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-priority/issue-priority.component.ts (ext=.ts, size=1334)
+2025-11-13 14:01:12,107 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-type/issue-type.component.html (ext=.html, size=1005)
+2025-11-13 14:01:12,204 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/index.ts
+2025-11-13 14:01:12,298 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-reporter/issue-reporter.component.html
+2025-11-13 14:01:12,423 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-delete-modal/issue-delete-modal.component.ts
+2025-11-13 14:01:12,502 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/issue-result/issue-result.component.ts (ext=.ts, size=471)
+2025-11-13 14:01:12,578 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.html
+2025-11-13 14:01:12,668 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/const.ts (ext=.ts, size=1024)
+2025-11-13 14:01:12,783 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.store.ts
+2025-11-13 14:01:12,866 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=30, active_workers=16/18
+2025-11-13 14:01:12,936 - Knowledge - INFO - [kw18] Queue=20, InProgress=0, PendingWorkers=16/18, Completed=0/206 (0.0%)
+2025-11-13 14:01:13,025 - Knowledge - INFO - knowledge worker kw19 start
+2025-11-13 14:01:13,025 - Knowledge - INFO - Worker kw20 created using shared MongoDB connection pool
+2025-11-13 14:01:13,118 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.stories.ts (ext=.ts, size=752)
+2025-11-13 14:01:13,199 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-icon/svg-icon.component.html (ext=.html, size=242)
+2025-11-13 14:01:13,299 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/ui-model/delete-issue-model.ts
+2025-11-13 14:01:13,377 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/services/google-analytics.service.ts
+2025-11-13 14:01:13,530 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.component.ts
+2025-11-13 14:01:13,606 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/loginPayload.ts
+2025-11-13 14:01:13,684 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/resizer/resizer.component.ts
+2025-11-13 14:01:13,773 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-priority/issue-priority.component.scss
+2025-11-13 14:01:13,849 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-type/issue-type.component.ts
+2025-11-13 14:01:13,962 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/index.ts (ext=.ts, size=332)
+2025-11-13 14:01:14,068 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-reporter/issue-reporter.component.html (ext=.html, size=664)
+2025-11-13 14:01:14,146 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-delete-modal/issue-delete-modal.component.ts (ext=.ts, size=661)
+2025-11-13 14:01:14,252 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.spec.ts
+2025-11-13 14:01:14,365 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.html (ext=.html, size=634)
+2025-11-13 14:01:14,461 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/editor.ts
+2025-11-13 14:01:14,538 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.store.ts (ext=.ts, size=491)
+2025-11-13 14:01:14,641 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app-route.module.spec.ts
+2025-11-13 14:01:14,723 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=20, active_workers=17/19
+2025-11-13 14:01:14,798 - Knowledge - INFO - [kw19] Queue=10, InProgress=0, PendingWorkers=17/19, Completed=0/206 (0.0%)
+2025-11-13 14:01:14,892 - Knowledge - INFO - knowledge worker kw20 start
+2025-11-13 14:01:14,966 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.ts
+2025-11-13 14:01:15,067 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-icon/svg-icon.component.spec.ts
+2025-11-13 14:01:15,163 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/ui-model/delete-issue-model.ts (ext=.ts, size=161)
+2025-11-13 14:01:15,268 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/services/google-analytics.service.ts (ext=.ts, size=969)
+2025-11-13 14:01:15,359 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.component.ts (ext=.ts, size=266)
+2025-11-13 14:01:15,486 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/loginPayload.ts (ext=.ts, size=175)
+2025-11-13 14:01:15,584 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/resizer/resizer.component.ts (ext=.ts, size=343)
+2025-11-13 14:01:15,661 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-priority/issue-priority.component.scss (ext=.scss, size=40)
+2025-11-13 14:01:15,739 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-type/issue-type.component.ts (ext=.ts, size=1142)
+2025-11-13 14:01:15,817 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd/board-dnd.component.scss
+2025-11-13 14:01:15,903 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-reporter/issue-reporter.component.ts
+2025-11-13 14:01:15,977 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-delete-modal/issue-delete-modal.component.html
+2025-11-13 14:01:16,054 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.spec.ts (ext=.ts, size=1081)
+2025-11-13 14:01:16,135 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.ts
+2025-11-13 14:01:16,229 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/editor.ts (ext=.ts, size=298)
+2025-11-13 14:01:16,300 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/utils/issue.ts
+2025-11-13 14:01:16,384 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app-route.module.spec.ts (ext=.ts, size=507)
+2025-11-13 14:01:16,488 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/src/app.po.ts
+2025-11-13 14:01:16,579 - Knowledge - INFO - Batch sizing: calculated=10, max_allowed=25, queue=10, active_workers=18/20
+2025-11-13 14:01:16,781 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.ts (ext=.ts, size=808)
+2025-11-13 14:01:16,900 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-icon/svg-icon.component.spec.ts (ext=.ts, size=437)
+2025-11-13 14:01:16,993 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/ui-model/nav-link.ts
+2025-11-13 14:01:17,099 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/services/google-analytics.service.spec.ts
+2025-11-13 14:01:17,204 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.component.html
+2025-11-13 14:01:17,309 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.store.ts
+2025-11-13 14:01:17,408 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/resizer/resizer.component.scss
+2025-11-13 14:01:17,533 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comments/issue-comments.component.html
+2025-11-13 14:01:17,648 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-type/issue-type.component.scss
+2025-11-13 14:01:17,770 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd/board-dnd.component.scss (ext=.scss, size=171)
+2025-11-13 14:01:17,900 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-reporter/issue-reporter.component.ts (ext=.ts, size=1127)
+2025-11-13 14:01:18,003 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-delete-modal/issue-delete-modal.component.html (ext=.html, size=494)
+2025-11-13 14:01:18,083 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.scss
+2025-11-13 14:01:18,172 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.ts (ext=.ts, size=613)
+2025-11-13 14:01:18,281 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/icons.ts
+2025-11-13 14:01:18,422 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/utils/issue.ts (ext=.ts, size=710)
+2025-11-13 14:01:18,489 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/test.ts
+2025-11-13 14:01:18,622 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/src/app.po.ts (ext=.ts, size=301)
+2025-11-13 14:01:18,808 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.scss
+2025-11-13 14:01:18,938 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-definitions/svg-definitions.component.html
+2025-11-13 14:01:19,018 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/ui-model/nav-link.ts (ext=.ts, size=109)
+2025-11-13 14:01:19,087 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/services/google-analytics.service.spec.ts (ext=.ts, size=1000)
+2025-11-13 14:01:19,191 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.html
+2025-11-13 14:01:19,268 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.store.ts (ext=.ts, size=509)
+2025-11-13 14:01:19,387 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/resizer/resizer.component.scss (ext=.scss, size=1693)
+2025-11-13 14:01:19,473 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comments/issue-comments.component.html (ext=.html, size=198)
+2025-11-13 14:01:19,588 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-type/issue-type.component.scss (ext=.scss, size=41)
+2025-11-13 14:01:19,660 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd/board-dnd.component.ts
+2025-11-13 14:01:19,754 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comment/issue-comment.component.scss
+2025-11-13 14:01:19,826 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-modal/issue-modal.component.scss
+2025-11-13 14:01:19,947 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.scss (ext=.scss, size=37)
+2025-11-13 14:01:20,057 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-type-select/issue-type-select.component.html
+2025-11-13 14:01:20,146 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/icons.ts (ext=.ts, size=368)
+2025-11-13 14:01:20,212 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/utils/date.ts
+2025-11-13 14:01:20,302 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/test.ts (ext=.ts, size=458)
+2025-11-13 14:01:20,380 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/tsconfig.json
+2025-11-13 14:01:20,476 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.scss (ext=.scss, size=856)
+2025-11-13 14:01:20,574 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-definitions/svg-definitions.component.ts
+2025-11-13 14:01:20,673 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/issue.ts
+2025-11-13 14:01:20,754 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/styles/_quill.scss
+2025-11-13 14:01:20,847 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.html (ext=.html, size=226)
+2025-11-13 14:01:20,939 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.service.ts
+2025-11-13 14:01:21,017 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navbar-left/navbar-left.component.ts
+2025-11-13 14:01:21,103 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comments/issue-comments.component.ts
+2025-11-13 14:01:21,192 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-assignees/issue-assignees.component.html
+2025-11-13 14:01:21,282 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd/board-dnd.component.ts (ext=.ts, size=699)
+2025-11-13 14:01:21,347 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comment/issue-comment.component.scss (ext=.scss, size=184)
+2025-11-13 14:01:21,426 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-modal/issue-modal.component.scss (ext=.scss, size=40)
+2025-11-13 14:01:21,503 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-reporter-select/issue-reporter-select.component.ts
+2025-11-13 14:01:21,622 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-type-select/issue-type-select.component.html (ext=.html, size=851)
+2025-11-13 14:01:21,699 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/sidebar.ts
+2025-11-13 14:01:21,813 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/utils/date.ts (ext=.ts, size=95)
+2025-11-13 14:01:21,894 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/polyfills.ts
+2025-11-13 14:01:21,990 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/tsconfig.json (ext=.json, size=217)
+2025-11-13 14:01:22,062 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.spec.ts
+2025-11-13 14:01:22,154 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-definitions/svg-definitions.component.ts (ext=.ts, size=202)
+2025-11-13 14:01:22,230 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/issue.ts (ext=.ts, size=1289)
+2025-11-13 14:01:22,329 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/styles/_quill.scss (ext=.scss, size=354)
+2025-11-13 14:01:22,412 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.module.spec.ts
+2025-11-13 14:01:22,534 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.service.ts (ext=.ts, size=1125)
+2025-11-13 14:01:22,614 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navbar-left/navbar-left.component.ts (ext=.ts, size=1492)
+2025-11-13 14:01:22,725 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comments/issue-comments.component.ts (ext=.ts, size=335)
+2025-11-13 14:01:22,821 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-assignees/issue-assignees.component.html (ext=.html, size=1108)
+2025-11-13 14:01:22,914 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd/board-dnd.component.html
+2025-11-13 14:01:23,025 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comment/issue-comment.component.html
+2025-11-13 14:01:23,186 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-modal/issue-modal.component.ts
+2025-11-13 14:01:23,306 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-reporter-select/issue-reporter-select.component.ts (ext=.ts, size=544)
+2025-11-13 14:01:23,384 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-type-select/issue-type-select.component.ts
+2025-11-13 14:01:23,469 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/sidebar.ts (ext=.ts, size=426)
+2025-11-13 14:01:23,546 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.module.spec.ts
+2025-11-13 14:01:23,618 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/assets/data/auth.json
+2025-11-13 14:01:23,715 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/protractor.conf.js
+2025-11-13 14:01:23,838 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.spec.ts (ext=.ts, size=810)
+2025-11-13 14:01:23,943 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/jira-control.module.ts
+2025-11-13 14:01:24,026 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/comment.spec.ts
+2025-11-13 14:01:24,098 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/styles/custom.scss
+2025-11-13 14:01:24,179 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.module.spec.ts (ext=.ts, size=378)
+2025-11-13 14:01:24,254 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.query.ts
+2025-11-13 14:01:24,339 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navbar-left/navbar-left.component.html
+2025-11-13 14:01:24,466 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-description/issue-description.component.ts
+2025-11-13 14:01:24,575 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-assignees/issue-assignees.component.ts
+2025-11-13 14:01:24,652 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd/board-dnd.component.html (ext=.html, size=319)
+2025-11-13 14:01:24,775 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comment/issue-comment.component.html (ext=.html, size=1683)
+2025-11-13 14:01:24,847 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-modal/issue-modal.component.ts (ext=.ts, size=1070)
+2025-11-13 14:01:24,965 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-reporter-select/issue-reporter-select.component.html
+2025-11-13 14:01:25,068 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-type-select/issue-type-select.component.ts (ext=.ts, size=802)
+2025-11-13 14:01:25,147 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/filter/filter.service.ts
+2025-11-13 14:01:25,228 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.module.spec.ts (ext=.ts, size=410)
+2025-11-13 14:01:25,316 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/assets/data/auth.json (ext=.json, size=272)
+2025-11-13 14:01:25,396 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/protractor.conf.js (ext=.js, size=808)
+2025-11-13 14:01:25,469 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.html
+2025-11-13 14:01:25,571 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/jira-control.module.ts (ext=.ts, size=884)
+2025-11-13 14:01:25,664 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/comment.spec.ts (ext=.ts, size=508)
+2025-11-13 14:01:25,749 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/styles/custom.scss (ext=.scss, size=45)
+2025-11-13 14:01:25,862 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.module.ts
+2025-11-13 14:01:25,968 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.query.ts (ext=.ts, size=350)
+2025-11-13 14:01:26,083 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navbar-left/navbar-left.component.scss
+2025-11-13 14:01:26,165 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-description/issue-description.component.ts (ext=.ts, size=1497)
+2025-11-13 14:01:26,272 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-assignees/issue-assignees.component.ts (ext=.ts, size=1534)
+2025-11-13 14:01:26,383 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-filter/board-filter.component.scss
+2025-11-13 14:01:26,495 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comment/issue-comment.component.ts
+2025-11-13 14:01:26,617 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-modal/issue-modal.component.html
+2025-11-13 14:01:26,690 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-reporter-select/issue-reporter-select.component.html (ext=.html, size=452)
+2025-11-13 14:01:26,770 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.html
+2025-11-13 14:01:26,864 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/filter/filter.service.ts (ext=.ts, size=1127)
+2025-11-13 14:01:26,955 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project-routing.module.ts
+2025-11-13 14:01:27,044 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/assets/data/project.json
+2025-11-13 14:01:27,118 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/angular.json
+2025-11-13 14:01:27,198 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.html (ext=.html, size=547)
+2025-11-13 14:01:27,278 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.scss
+2025-11-13 14:01:27,362 - Knowledge - INFO - Worker kw3 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/issue-priority-icon.ts
+2025-11-13 14:01:27,478 - Knowledge - INFO - Worker kw4 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/styles/_form.scss
+2025-11-13 14:01:27,575 - Knowledge - INFO - Worker kw5 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/board/board.component.html
+2025-11-13 14:01:27,686 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.service.spec.ts
+2025-11-13 14:01:27,812 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navbar-left/navbar-left.component.scss (ext=.scss, size=584)
+2025-11-13 14:01:27,939 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-description/issue-description.component.html
+2025-11-13 14:01:28,018 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-assignees/issue-assignees.component.scss
+2025-11-13 14:01:28,104 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-filter/board-filter.component.scss (ext=.scss, size=224)
+2025-11-13 14:01:28,183 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-loader/issue-loader.component.html
+2025-11-13 14:01:28,301 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-modal/issue-modal.component.html (ext=.html, size=335)
+2025-11-13 14:01:28,380 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-priority-select/issue-priority-select.component.spec.ts
+2025-11-13 14:01:28,475 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.ts
+2025-11-13 14:01:28,554 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/filter/filter.store.ts
+2025-11-13 14:01:28,638 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project-routing.module.ts (ext=.ts, size=1017)
+2025-11-13 14:01:28,729 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/assets/data/project.json (ext=.json, size=29780)
+2025-11-13 14:01:28,847 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/angular.json (ext=.json, size=5017)
+2025-11-13 14:01:28,937 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.stories.ts
+2025-11-13 14:01:29,042 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.scss (ext=.scss, size=114)
+2025-11-13 14:01:29,122 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/issue-priority-icon.ts (ext=.ts, size=440)
+2025-11-13 14:01:29,207 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/styles/_form.scss (ext=.scss, size=1457)
+2025-11-13 14:01:29,435 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.service.spec.ts (ext=.ts, size=1773)
+2025-11-13 14:01:29,548 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/sidebar/sidebar.component.ts
+2025-11-13 14:01:29,637 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-description/issue-description.component.html (ext=.html, size=1182)
+2025-11-13 14:01:29,747 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-assignees/issue-assignees.component.scss (ext=.scss, size=225)
+2025-11-13 14:01:29,878 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-filter/board-filter.component.ts
+2025-11-13 14:01:29,996 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-loader/issue-loader.component.html (ext=.html, size=1156)
+2025-11-13 14:01:30,067 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/search-drawer/search-drawer.component.html
+2025-11-13 14:01:30,152 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-priority-select/issue-priority-select.component.spec.ts (ext=.ts, size=667)
+2025-11-13 14:01:30,242 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/user/user.component.ts
+2025-11-13 14:01:30,343 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/filter/filter.store.ts (ext=.ts, size=581)
+2025-11-13 14:01:30,413 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.guard.ts
+2025-11-13 14:01:30,494 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/index.html
+2025-11-13 14:01:30,573 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/documentation.json
+2025-11-13 14:01:30,664 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.stories.ts (ext=.ts, size=968)
+2025-11-13 14:01:30,740 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.spec.ts
+2025-11-13 14:01:30,905 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.component.html (small file (2047 bytes))
+2025-11-13 14:01:31,034 - Knowledge - INFO - Worker kw6 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.scss
+2025-11-13 14:01:31,070 - Knowledge - INFO - Processing batch of 12 files
+2025-11-13 14:01:31,118 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/board/board.component.html (small file (2324 bytes))
+2025-11-13 14:01:31,119 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/sidebar/sidebar.component.ts (ext=.ts, size=989)
+2025-11-13 14:01:31,231 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-description/issue-description.component.scss
+2025-11-13 14:01:31,316 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.html
+2025-11-13 14:01:31,449 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-filter/board-filter.component.ts (ext=.ts, size=1744)
+2025-11-13 14:01:31,547 - Knowledge - INFO - Worker kw11 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-loader/issue-loader.component.ts
+2025-11-13 14:01:31,643 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/search-drawer/search-drawer.component.html (ext=.html, size=1601)
+2025-11-13 14:01:31,720 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-priority-select/issue-priority-select.component.html
+2025-11-13 14:01:31,834 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/user/user.component.ts (ext=.ts, size=293)
+2025-11-13 14:01:32,003 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/filter/filter.query.ts
+2025-11-13 14:01:32,093 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.guard.ts (ext=.ts, size=1244)
+2025-11-13 14:01:32,184 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/tsconfig.app.json
+2025-11-13 14:01:32,294 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/documentation.json (ext=.json, size=460772)
+2025-11-13 14:01:32,390 - Knowledge - INFO - Worker kw1 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.ts
+2025-11-13 14:01:32,482 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.spec.ts (ext=.ts, size=376)
+2025-11-13 14:01:32,614 - Knowledge - INFO - Processing batch of 12 files
+2025-11-13 14:01:32,639 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.scss (ext=.scss, size=165)
+2025-11-13 14:01:32,750 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.html
+2025-11-13 14:01:32,918 - Knowledge - INFO - Worker kw7 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/sidebar/sidebar.component.html
+2025-11-13 14:01:33,051 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-description/issue-description.component.scss (ext=.scss, size=615)
+2025-11-13 14:01:33,161 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.html (ext=.html, size=172)
+2025-11-13 14:01:33,230 - Knowledge - INFO - Worker kw8 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-filter/board-filter.component.html
+2025-11-13 14:01:33,352 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-loader/issue-loader.component.ts (ext=.ts, size=240)
+2025-11-13 14:01:33,423 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/search-drawer/search-drawer.component.ts
+2025-11-13 14:01:33,517 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-priority-select/issue-priority-select.component.html (ext=.html, size=1000)
+2025-11-13 14:01:33,602 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/user/user.component.html
+2025-11-13 14:01:33,704 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/filter/filter.query.ts (ext=.ts, size=624)
+2025-11-13 14:01:33,788 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.ts
+2025-11-13 14:01:33,878 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/tsconfig.app.json (ext=.json, size=251)
+2025-11-13 14:01:34,009 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/tsconfig.spec.json
+2025-11-13 14:01:34,102 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.ts (ext=.ts, size=436)
+2025-11-13 14:01:34,230 - Knowledge - INFO - Worker kw2 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.ts
+2025-11-13 14:01:34,306 - Knowledge - INFO - [LLM_CALL] Completed: snow.component.html:chunk1, Duration: 4973ms, PromptTokens: 4786, CompletionTokens: 59, Cost: $0.00050
+2025-11-13 14:01:34,315 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/issue-type-icon.ts
+2025-11-13 14:01:34,407 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/settings/settings.component.ts (small file (2313 bytes))
+2025-11-13 14:01:34,487 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.stories.ts
+2025-11-13 14:01:34,564 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/sidebar/sidebar.component.html (ext=.html, size=1762)
+2025-11-13 14:01:34,670 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-status/issue-status.component.ts
+2025-11-13 14:01:34,763 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.ts
+2025-11-13 14:01:34,860 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-filter/board-filter.component.html (ext=.html, size=1522)
+2025-11-13 14:01:34,928 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-detail/issue-detail.component.html (small file (2458 bytes))
+2025-11-13 14:01:35,014 - Knowledge - INFO - Worker kw12 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/search-drawer/search-drawer.component.scss
+2025-11-13 14:01:35,136 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-priority-select/issue-priority-select.component.ts
+2025-11-13 14:01:35,262 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/user/user.component.html (ext=.html, size=205)
+2025-11-13 14:01:35,356 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.query.ts
+2025-11-13 14:01:35,440 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.ts (ext=.ts, size=952)
+2025-11-13 14:01:35,525 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/package.json
+2025-11-13 14:01:35,597 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/tsconfig.spec.json (ext=.json, size=270)
+2025-11-13 14:01:35,694 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/index.prod.html (small file (2618 bytes))
+2025-11-13 14:01:35,760 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.ts (ext=.ts, size=546)
+2025-11-13 14:01:35,843 - Knowledge - INFO - done ingest for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.component.html
+2025-11-13 14:01:35,932 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress-routing.module.spec.ts
+2025-11-13 14:01:36,117 - Knowledge - INFO - Processing batch of 12 files
+2025-11-13 14:01:36,125 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.scss
+2025-11-13 14:01:36,298 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-status/issue-status.component.ts (ext=.ts, size=1761)
+2025-11-13 14:01:36,379 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.ts (ext=.ts, size=932)
+2025-11-13 14:01:36,571 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comment/issue-comment.component.ts (small file (2031 bytes))
+2025-11-13 14:01:36,642 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/search-drawer/search-drawer.component.scss (ext=.scss, size=78)
+2025-11-13 14:01:36,712 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-priority-select/issue-priority-select.component.ts (ext=.ts, size=830)
+2025-11-13 14:01:36,791 - Knowledge - INFO - Worker kw14 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.spec.ts
+2025-11-13 14:01:36,881 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.query.ts (ext=.ts, size=1178)
+2025-11-13 14:01:36,968 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.html
+2025-11-13 14:01:37,083 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/package.json (ext=.json, size=3379)
+2025-11-13 14:01:37,175 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/tsconfig.json
+2025-11-13 14:01:37,311 - Knowledge - INFO - Processing batch of 15 files
+2025-11-13 14:01:37,624 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.module.ts
+2025-11-13 14:01:37,733 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/board/board.component.ts
+2025-11-13 14:01:38,037 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.module.ts
+2025-11-13 14:01:38,137 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-status/issue-status.component.html
+2025-11-13 14:01:38,213 - Knowledge - INFO - Worker kw9 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.scss
+2025-11-13 14:01:38,382 - Knowledge - INFO - Processing batch of 10 files
+2025-11-13 14:01:38,409 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/search-drawer/search-drawer.component.ts (small file (2316 bytes))
+2025-11-13 14:01:38,492 - Knowledge - INFO - Worker kw13 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.scss
+2025-11-13 14:01:38,572 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.spec.ts (ext=.ts, size=482)
+2025-11-13 14:01:38,675 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.service.spec.ts
+2025-11-13 14:01:38,753 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.html (ext=.html, size=241)
+2025-11-13 14:01:38,849 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/webpack.config.js
+2025-11-13 14:01:38,953 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/tsconfig.json (ext=.json, size=672)
+2025-11-13 14:01:39,040 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/environments/environment-model.ts
+2025-11-13 14:01:39,152 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.component.html
+2025-11-13 14:01:39,215 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/settings/settings.component.scss
+2025-11-13 14:01:39,316 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/comment.ts
+2025-11-13 14:01:39,399 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-status/issue-status.component.html (ext=.html, size=868)
+2025-11-13 14:01:39,478 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.scss (ext=.scss, size=107)
+2025-11-13 14:01:39,589 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-detail/issue-detail.component.html
+2025-11-13 14:01:39,769 - Knowledge - INFO - Processing batch of 10 files
+2025-11-13 14:01:39,810 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.scss (ext=.scss, size=103)
+2025-11-13 14:01:39,888 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.html (small file (2631 bytes))
+2025-11-13 14:01:40,022 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.service.spec.ts (ext=.ts, size=535)
+2025-11-13 14:01:40,113 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.ts
+2025-11-13 14:01:40,210 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/webpack.config.js (ext=.js, size=344)
+2025-11-13 14:01:40,318 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/README.md
+2025-11-13 14:01:40,451 - Knowledge - INFO - [LLM_CALL] Completed: project.module.ts:chunk1, Duration: 10157ms, PromptTokens: 2298, CompletionTokens: 552, Cost: $0.00045
+2025-11-13 14:01:40,475 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/environments/environment.ts
+2025-11-13 14:01:40,588 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.module.spec.ts
+2025-11-13 14:01:40,706 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/settings/settings.component.html
+2025-11-13 14:01:40,791 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/user.ts
+2025-11-13 14:01:40,901 - Knowledge - INFO - Worker kw10 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-detail/issue-detail.component.spec.ts
+2025-11-13 14:01:41,167 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-detail/issue-detail.component.ts
+2025-11-13 14:01:41,278 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/index.ts
+2025-11-13 14:01:41,504 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.ts (small file (2528 bytes))
+2025-11-13 14:01:41,583 - Knowledge - INFO - Worker kw15 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.service.ts
+2025-11-13 14:01:41,677 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.ts (ext=.ts, size=1256)
+2025-11-13 14:01:41,764 - Knowledge - INFO - Worker kw17 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/src/app.e2e-spec.ts
+2025-11-13 14:01:41,847 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/README.md (ext=.md, size=14824)
+2025-11-13 14:01:41,927 - Knowledge - INFO - done ingest for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.module.ts
+2025-11-13 14:01:41,928 - Knowledge - INFO - [LLM_CALL] Completed: svg-definitions.component.html:chunk1, Duration: 4592ms, PromptTokens: 26540, CompletionTokens: 59, Cost: $0.00268
+2025-11-13 14:01:42,005 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/environments/environment.prod.ts
+2025-11-13 14:01:42,149 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress-routing.module.ts
+2025-11-13 14:01:42,261 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/settings/settings.component.ts
+2025-11-13 14:01:42,388 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/project.ts
+2025-11-13 14:01:42,484 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-detail/issue-detail.component.spec.ts (ext=.ts, size=1473)
+2025-11-13 14:01:42,565 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-reporter/issue-reporter.component.scss
+2025-11-13 14:01:42,647 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-delete-modal/issue-delete-modal.component.spec.ts
+2025-11-13 14:01:42,807 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.service.ts (small file (2204 bytes))
+2025-11-13 14:01:42,875 - Knowledge - INFO - Worker kw16 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app-routing.module.ts
+2025-11-13 14:01:42,965 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/src/app.e2e-spec.ts (ext=.ts, size=641)
+2025-11-13 14:01:43,047 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/tailwind.config.js
+2025-11-13 14:01:43,210 - Knowledge - INFO - done ingest for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-definitions/svg-definitions.component.html
+2025-11-13 14:01:43,210 - Knowledge - INFO - [LLM_CALL] Completed: navbar-left.component.html:chunk1, Duration: 6973ms, PromptTokens: 2908, CompletionTokens: 203, Cost: $0.00037
+2025-11-13 14:01:43,328 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/main.ts
+2025-11-13 14:01:43,403 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/work-in-progress/work-in-progress.component.ts
+2025-11-13 14:01:43,482 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/full-issue-detail/full-issue-detail.component.html
+2025-11-13 14:01:43,555 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/ui-model/delete-issue-model.ts
+2025-11-13 14:01:43,745 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-reporter/issue-reporter.component.html
+2025-11-13 14:01:43,844 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-delete-modal/issue-delete-modal.component.ts
+2025-11-13 14:01:43,998 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app-routing.module.ts (ext=.ts, size=595)
+2025-11-13 14:01:44,113 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/polyfills.ts (small file (2340 bytes))
+2025-11-13 14:01:44,183 - Knowledge - INFO - Worker kw18 processing /app/data/T0015/224199/b0194o2/jira-clone-angular/karma.conf.js
+2025-11-13 14:01:44,353 - Knowledge - INFO - done ingest for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navbar-left/navbar-left.component.html
+2025-11-13 14:01:44,443 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/styles.scss
+2025-11-13 14:01:44,499 - Knowledge - INFO - Processing batch of 12 files
+2025-11-13 14:01:44,514 - Knowledge - INFO - Processing batch of 10 files
+2025-11-13 14:01:44,527 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/services/google-analytics.service.ts
+2025-11-13 14:01:44,540 - Knowledge - INFO - Processing batch of 12 files
+2025-11-13 14:01:44,540 - Knowledge - INFO - Processing batch of 10 files
+2025-11-13 14:01:44,548 - Knowledge - INFO - Processing batch of 12 files
+2025-11-13 14:01:44,550 - Knowledge - INFO - Processing batch of 15 files
+2025-11-13 14:01:44,555 - Knowledge - INFO - Processing batch of 10 files
+2025-11-13 14:01:44,607 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/full-issue-detail/full-issue-detail.component.ts
+2025-11-13 14:01:44,687 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/ui-model/nav-link.ts
+2025-11-13 14:01:44,757 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-reporter/issue-reporter.component.ts
+2025-11-13 14:01:44,825 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-delete-modal/issue-delete-modal.component.html
+2025-11-13 14:01:45,008 - Knowledge - INFO - Processing batch of 10 files
+2025-11-13 14:01:45,041 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/src/index.html (small file (2203 bytes))
+2025-11-13 14:01:45,124 - Knowledge - INFO - Fast-tracked /app/data/T0015/224199/b0194o2/jira-clone-angular/karma.conf.js (ext=.js, size=1490)
+2025-11-13 14:01:45,239 - Knowledge - INFO - Processing batch of 12 files
+2025-11-13 14:01:45,284 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/index.prod.html
+2025-11-13 14:01:45,362 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-card/issue-card.component.html
+2025-11-13 14:01:45,443 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/issue-result/issue-result.component.html
+2025-11-13 14:01:45,553 - Knowledge - INFO - [LLM_CALL] Completed: board-dnd-list.component.ts:chunk1, Duration: 9071ms, PromptTokens: 2400, CompletionTokens: 506, Cost: $0.00044
+2025-11-13 14:01:45,555 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/services/google-analytics.service.spec.ts
+2025-11-13 14:01:45,648 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.spec.ts
+2025-11-13 14:01:45,739 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.spec.ts
+2025-11-13 14:01:45,816 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/directives/autofocus.directive.spec.ts
+2025-11-13 14:01:45,930 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.spec.ts
+2025-11-13 14:01:46,004 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/const.ts
+2025-11-13 14:01:46,117 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/loginPayload.ts
+2025-11-13 14:01:46,210 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/issue.ts
+2025-11-13 14:01:46,286 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comment/issue-comment.component.scss
+2025-11-13 14:01:46,414 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-modal/issue-modal.component.scss
+2025-11-13 14:01:46,535 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.store.ts
+2025-11-13 14:01:46,845 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.html
+2025-11-13 14:01:46,939 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.spec.ts
+2025-11-13 14:01:47,032 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-card/issue-card.component.ts
+2025-11-13 14:01:47,132 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/issue-result/issue-result.component.ts
+2025-11-13 14:01:47,210 - Knowledge - INFO - done ingest for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts
+2025-11-13 14:01:47,263 - Knowledge - INFO - Processing batch of 10 files
+2025-11-13 14:01:47,280 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/styles/_quill.scss
+2025-11-13 14:01:47,366 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-priority/issue-priority.component.html
+2025-11-13 14:01:47,449 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.html
+2025-11-13 14:01:47,535 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/directives/autofocus.directive.ts
+2025-11-13 14:01:47,604 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.scss
+2025-11-13 14:01:47,695 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/editor.ts
+2025-11-13 14:01:47,805 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.store.ts
+2025-11-13 14:01:47,888 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/comment.spec.ts
+2025-11-13 14:01:47,970 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comment/issue-comment.component.html
+2025-11-13 14:01:48,085 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-modal/issue-modal.component.ts
+2025-11-13 14:01:48,202 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/utils/issue.ts
+2025-11-13 14:01:48,287 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.ts
+2025-11-13 14:01:48,408 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.html
+2025-11-13 14:01:48,493 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-card/issue-card.component.scss
+2025-11-13 14:01:48,628 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.spec.ts
+2025-11-13 14:01:48,770 - Knowledge - INFO - Processing batch of 12 files
+2025-11-13 14:01:48,832 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app-route.module.spec.ts
+2025-11-13 14:01:48,930 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/styles/custom.scss
+2025-11-13 14:01:49,055 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-priority/issue-priority.component.ts
+2025-11-13 14:01:49,168 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.ts
+2025-11-13 14:01:49,269 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/validators/no-whitespace.validator.ts
+2025-11-13 14:01:49,389 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/breadcrumbs/breadcrumbs.component.ts
+2025-11-13 14:01:49,471 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/icons.ts
+2025-11-13 14:01:49,542 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.service.ts
+2025-11-13 14:01:49,629 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/interface/issue-priority-icon.ts
+2025-11-13 14:01:49,705 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comment/issue-comment.component.ts
+2025-11-13 14:01:49,793 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-modal/issue-modal.component.html
+2025-11-13 14:01:49,908 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/utils/date.ts
+2025-11-13 14:01:50,014 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.scss
+2025-11-13 14:01:50,084 - Knowledge - INFO - [LLM_CALL] Completed: tailwind.config.js:chunk1, Duration: 2873ms, PromptTokens: 8058, CompletionTokens: 143, Cost: $0.00086
+2025-11-13 14:01:50,104 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.stories.ts
+2025-11-13 14:01:50,174 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-type/issue-type.component.html
+2025-11-13 14:01:50,270 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.scss
+2025-11-13 14:01:50,347 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/sidebar/sidebar.component.scss
+2025-11-13 14:01:50,441 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/test.ts
+2025-11-13 14:01:50,530 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/styles/_form.scss
+2025-11-13 14:01:50,648 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-priority/issue-priority.component.scss
+2025-11-13 14:01:50,716 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-type-select/issue-type-select.component.html
+2025-11-13 14:01:50,804 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/validators/no-whitespace.validator.spec.ts
+2025-11-13 14:01:50,886 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/breadcrumbs/breadcrumbs.stories.ts
+2025-11-13 14:01:50,967 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/config/sidebar.ts
+2025-11-13 14:01:51,067 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.query.ts
+2025-11-13 14:01:51,251 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-loader/issue-loader.component.html
+2025-11-13 14:01:51,348 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/search-drawer/search-drawer.component.html
+2025-11-13 14:01:51,442 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.module.spec.ts
+2025-11-13 14:01:51,549 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navigation/navigation.component.spec.ts
+2025-11-13 14:01:51,632 - Knowledge - INFO - done ingest for /app/data/T0015/224199/b0194o2/jira-clone-angular/tailwind.config.js
+2025-11-13 14:01:51,721 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.ts
+2025-11-13 14:01:51,811 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-type/issue-type.component.ts
+2025-11-13 14:01:51,925 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-reporter-select/issue-reporter-select.component.ts
+2025-11-13 14:01:52,006 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/index.ts
+2025-11-13 14:01:52,088 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/polyfills.ts
+2025-11-13 14:01:52,273 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comments/issue-comments.component.html
+2025-11-13 14:01:52,337 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-type-select/issue-type-select.component.ts
+2025-11-13 14:01:52,402 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.module.ts
+2025-11-13 14:01:52,402 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 271, Duration: 0ms
+2025-11-13 14:01:52,599 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/breadcrumbs/breadcrumbs.component.html
+2025-11-13 14:01:52,611 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/filter/filter.service.ts
+2025-11-13 14:01:52,775 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/auth/auth.service.spec.ts
+2025-11-13 14:01:52,850 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-loader/issue-loader.component.ts
+2025-11-13 14:01:52,942 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/search-drawer/search-drawer.component.ts
+2025-11-13 14:01:53,036 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project-routing.module.ts
+2025-11-13 14:01:53,140 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/resizer/resizer.component.html
+2025-11-13 14:01:53,270 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.scss
+2025-11-13 14:01:53,361 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-type/issue-type.component.scss
+2025-11-13 14:01:53,441 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-reporter-select/issue-reporter-select.component.html
+2025-11-13 14:01:53,534 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd-list/board-dnd-list.component.html
+2025-11-13 14:01:53,655 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/assets/data/auth.json
+2025-11-13 14:01:53,760 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-comments/issue-comments.component.ts
+2025-11-13 14:01:53,845 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.html
+2025-11-13 14:01:53,962 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.component.scss
+2025-11-13 14:01:54,036 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 1634ms
+2025-11-13 14:01:54,110 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/jira-control.module.spec.ts
+2025-11-13 14:01:54,212 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/filter/filter.store.ts
+2025-11-13 14:01:54,291 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.scss
+2025-11-13 14:01:54,527 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/search/search-drawer/search-drawer.component.scss
+2025-11-13 14:01:54,563 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.guard.ts
+2025-11-13 14:01:54,640 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/resizer/resizer.component.ts
+2025-11-13 14:01:54,721 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/input/input.component.spec.ts
+2025-11-13 14:01:54,827 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-assignees/issue-assignees.component.html
+2025-11-13 14:01:54,932 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-priority-select/issue-priority-select.component.spec.ts
+2025-11-13 14:01:55,032 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd-list/board-dnd-list.component.ts
+2025-11-13 14:01:55,106 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/assets/data/project.json
+2025-11-13 14:01:55,199 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-description/issue-description.component.ts
+2025-11-13 14:01:55,312 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/add-issue-modal.component.ts
+2025-11-13 14:01:55,387 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.component.ts
+2025-11-13 14:01:55,461 - Knowledge - INFO - Progress: 95.1% | Files: 197/206 | Rate: 2.74 files/sec | Queue: 0
+2025-11-13 14:01:55,498 - Knowledge - INFO - Processing batch of 10 files
+2025-11-13 14:01:55,545 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-icon/svg-icon.component.ts
+2025-11-13 14:01:55,634 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/filter/filter.query.ts
+2025-11-13 14:01:55,983 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.ts
+2025-11-13 14:01:56,093 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/resizer/resizer.component.scss
+2025-11-13 14:01:56,149 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.html
+2025-11-13 14:01:56,217 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-assignees/issue-assignees.component.ts
+2025-11-13 14:01:56,357 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd-list/board-dnd-list.component.scss
+2025-11-13 14:01:56,357 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-priority-select/issue-priority-select.component.html
+2025-11-13 14:01:56,487 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/index.html
+2025-11-13 14:01:56,610 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/user/user.component.ts
+2025-11-13 14:01:56,610 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-description/issue-description.component.html
+2025-11-13 14:01:56,740 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/core/snow/snow.component.html
+2025-11-13 14:01:56,861 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/src/app.po.ts
+2025-11-13 14:01:57,029 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 271, Duration: 0ms
+2025-11-13 14:01:57,030 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-icon/svg-icon.component.html
+2025-11-13 14:01:57,058 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.query.ts
+2025-11-13 14:01:57,187 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.html
+2025-11-13 14:01:57,305 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navbar-left/navbar-left.component.ts
+2025-11-13 14:01:57,396 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.stories.ts
+2025-11-13 14:01:57,508 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-assignees/issue-assignees.component.scss
+2025-11-13 14:01:57,580 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/index.ts
+2025-11-13 14:01:57,660 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-priority-select/issue-priority-select.component.ts
+2025-11-13 14:01:57,759 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/tsconfig.app.json
+2025-11-13 14:01:57,840 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/user/user.component.html
+2025-11-13 14:01:57,913 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-description/issue-description.component.scss
+2025-11-13 14:01:57,996 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.html
+2025-11-13 14:01:58,116 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/tsconfig.json
+2025-11-13 14:01:58,216 - Knowledge - INFO - [WEBSOCKET] Sent: Type=unknown, Size: ?, Duration: 1187ms
+2025-11-13 14:01:58,309 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-icon/svg-icon.component.spec.ts
+2025-11-13 14:01:58,399 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.service.spec.ts
+2025-11-13 14:01:58,522 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.component.ts
+2025-11-13 14:01:58,592 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navbar-left/navbar-left.component.html
+2025-11-13 14:01:58,667 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/button/button.component.ts
+2025-11-13 14:01:58,745 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.html
+2025-11-13 14:01:58,858 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd/board-dnd.component.scss
+2025-11-13 14:01:58,941 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/add-issue-modal/issue-assignees-select/issue-assignees-select.component.scss
+2025-11-13 14:01:59,052 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/package.json
+2025-11-13 14:01:59,131 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.component.spec.ts
+2025-11-13 14:01:59,205 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-status/issue-status.component.ts
+2025-11-13 14:01:59,305 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app.module.spec.ts
+2025-11-13 14:01:59,417 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/protractor.conf.js
+2025-11-13 14:01:59,497 - Knowledge - INFO - Progress: 100.0% | Files: 206/206 | Rate: 2.70 files/sec | Queue: 0
+2025-11-13 14:01:59,569 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-definitions/svg-definitions.component.html
+2025-11-13 14:01:59,648 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/state/project/project.service.ts
+2025-11-13 14:01:59,753 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/app-routing.module.ts
+2025-11-13 14:01:59,830 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/navbar-left/navbar-left.component.scss
+2025-11-13 14:01:59,983 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.ts
+2025-11-13 14:02:00,054 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd/board-dnd.component.ts
+2025-11-13 14:02:00,330 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/webpack.config.js
+2025-11-13 14:02:00,469 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-status/issue-status.component.html
+2025-11-13 14:02:00,588 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/project.module.ts
+2025-11-13 14:02:00,826 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/angular.json
+2025-11-13 14:02:01,104 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/svg-definitions/svg-definitions.component.ts
+2025-11-13 14:02:01,186 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/sidebar/sidebar.component.ts
+2025-11-13 14:02:01,188 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-title/issue-title.component.scss
+2025-11-13 14:02:01,543 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-dnd/board-dnd.component.html
+2025-11-13 14:02:01,650 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/issues/issue-detail/issue-detail.component.spec.ts
+2025-11-13 14:02:01,724 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/documentation.json
+2025-11-13 14:02:01,894 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/pages/board/board.component.html
+2025-11-13 14:02:01,955 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/jira-control.module.ts
+2025-11-13 14:02:02,132 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/e2e/src/app.e2e-spec.ts
+2025-11-13 14:02:02,210 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-filter/board-filter.component.scss
+2025-11-13 14:02:02,334 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/tsconfig.spec.json
+2025-11-13 14:02:02,456 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.scss
+2025-11-13 14:02:02,526 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/navigation/sidebar/sidebar.component.html
+2025-11-13 14:02:02,807 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-filter/board-filter.component.ts
+2025-11-13 14:02:02,915 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.spec.ts
+2025-11-13 14:02:03,015 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/tsconfig.json
+2025-11-13 14:02:03,332 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/project/components/board/board-filter/board-filter.component.html
+2025-11-13 14:02:03,622 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/src/app/jira-control/avatar/avatar.component.ts
+2025-11-13 14:02:04,729 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/README.md
+2025-11-13 14:02:05,831 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/tailwind.config.js
+2025-11-13 14:02:06,160 - Knowledge - INFO - process ingested knowledge for /app/data/T0015/224199/b0194o2/jira-clone-angular/karma.conf.js
+2025-11-13 14:02:08,197 - Knowledge - INFO - Knowledge creation complete
+2025-11-13 14:02:08,386 - Knowledge - INFO - ==================================================
+2025-11-13 14:02:08,610 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-11-13 14:02:08,792 - Knowledge - INFO - ==================================================
+2025-11-13 14:02:08,938 - Knowledge - INFO - Total processing time: 87.71 seconds (1.46 minutes)
+2025-11-13 14:02:09,176 - Knowledge - INFO - Files processed: 0
+2025-11-13 14:02:09,351 - Knowledge - INFO - Processing rate: 0.00 files/second
+2025-11-13 14:02:09,560 - Knowledge - INFO - 
+[TIME_BREAKDOWN]
+2025-11-13 14:02:09,743 - Knowledge - INFO - File Reading: 0.00s (0.0%)
+2025-11-13 14:02:09,914 - Knowledge - INFO - LLM Processing: 38.64s (44.1%)
+2025-11-13 14:02:10,149 - Knowledge - INFO - MongoDB Operations: 0.00s (0.0%)
+2025-11-13 14:02:10,342 - Knowledge - INFO - Redis Operations: 0.00s (0.0%)
+2025-11-13 14:02:10,502 - Knowledge - INFO - WebSocket Communication: 2.82s (3.2%)
+2025-11-13 14:02:10,664 - Knowledge - INFO - Other Overhead: 46.25s (52.7%)
+2025-11-13 14:02:10,868 - Knowledge - INFO - 
+[LLM_STATS]
+2025-11-13 14:02:11,026 - Knowledge - INFO - Total LLM calls: 6
+2025-11-13 14:02:11,192 - Knowledge - INFO - Average LLM response time: 6440ms
+2025-11-13 14:02:11,406 - Knowledge - INFO - Average prompt tokens: 7831.7
+2025-11-13 14:02:11,576 - Knowledge - INFO - Average completion tokens: 253.7
+2025-11-13 14:02:11,776 - Knowledge - INFO - Total prompt tokens: 46990
+2025-11-13 14:02:11,934 - Knowledge - INFO - Total completion tokens: 1522
+2025-11-13 14:02:12,100 - Knowledge - INFO - Total LLM cost: $0.0053
+2025-11-13 14:02:12,276 - Knowledge - INFO - 
+[DATABASE_STATS]
+2025-11-13 14:02:12,481 - Knowledge - INFO - MongoDB operations: 0
+2025-11-13 14:02:12,665 - Knowledge - INFO - Redis operations: 0
+2025-11-13 14:02:12,880 - Knowledge - INFO - 
+[COMMUNICATION_STATS]
+2025-11-13 14:02:13,057 - Knowledge - INFO - WebSocket messages sent: 4
+2025-11-13 14:02:13,210 - Knowledge - INFO - Average message size: 135.5 bytes
+2025-11-13 14:02:13,405 - Knowledge - INFO - 
+[WORKER_STATS]
+2025-11-13 14:02:13,573 - Knowledge - INFO - 
+[FILE_TYPE_STATS]
+2025-11-13 14:02:13,730 - Knowledge - INFO - 
+[SLOWEST_FILES]
+2025-11-13 14:02:13,895 - Knowledge - INFO - ==================================================
+2025-11-13 14:02:14,090 - Knowledge - INFO - ==================================================
+2025-11-13 14:02:14,285 - Knowledge - INFO - KNOWLEDGE GRAPH GENERATION PERFORMANCE SUMMARY
+2025-11-13 14:02:14,443 - Knowledge - INFO - ==================================================
+2025-11-13 14:02:14,627 - Knowledge - INFO - Total processing time: 93.51 seconds (1.56 minutes)
+2025-11-13 14:02:14,828 - Knowledge - INFO - Files processed: 206 of 206
+2025-11-13 14:02:15,022 - Knowledge - INFO - Processing rate: 2.20 files/second
+2025-11-13 14:02:15,194 - Knowledge - INFO - WebSocket messages sent: 2
+2025-11-13 14:02:15,401 - Knowledge - INFO - MongoDB operations: 206
+2025-11-13 14:02:15,562 - Knowledge - INFO - Average MongoDB ops per file: 1.00
+2025-11-13 14:02:15,754 - Knowledge - INFO - LLM costs: $0.0053
+2025-11-13 14:02:15,963 - Knowledge - INFO - Prompt tokens: 46990
+2025-11-13 14:02:16,152 - Knowledge - INFO - Completion tokens: 1522
+2025-11-13 14:02:16,330 - Knowledge - INFO - Updating org costs, total cost: 0.0053078
+2025-11-13 14:02:17,468 - Knowledge - INFO - [WEBSOCKET] Sent: Type=progress_update, Size: 269, Duration: 0ms
+2025-11-13 14:02:17,653 - Knowledge - INFO - Saving knowledge to Redis...
+2025-11-13 14:02:17,860 - Knowledge - INFO - Knowledge saved to Redis successfully
